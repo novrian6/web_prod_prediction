@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Predicted Product for User</title>
+</head>
+<body>
+  <h1>Predicted  next  products chosen by User {{ user_id }}</h1>
+  <p>The following result show the predicted next product user might choose (ordered by the highest probability)</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Product ID</th>
+        <th>Predicted Rating </th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for recommendation in recommendations %}
+      <tr>
+        <td>{{ recommendation.item_id }}</td>
+        <td>{{ recommendation.predicted_rating| round(2) }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+   <hr>
+     <p>(c)2023 by Nova Novriansyah</p>
+</body>
+</html>
