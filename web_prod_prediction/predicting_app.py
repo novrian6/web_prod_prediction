@@ -1,4 +1,5 @@
 
+
 from flask import Flask, render_template, request
 import pickle
 import pandas as pd
@@ -6,8 +7,8 @@ from surprise import Dataset, Reader, SVD
 
 app = Flask(__name__)
 
-# Load your pre-trained model and dataset
-# Replace these paths with your model and dataset paths
+# Load   pre-trained model and dataset
+ 
 MODEL_PATH = '/home/liebera6/mysite/collab_filtering_model.pkl'
 DATASET_PATH = '/home/liebera6/mysite/merged_data.csv'
 
