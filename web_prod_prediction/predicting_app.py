@@ -16,7 +16,7 @@ DATASET_PATH = '/home/liebera6/mysite/merged_data.csv'
 with open(MODEL_PATH, 'rb') as file:
     model = pickle.load(file)
 
-# Load your dataset into a DataFrame (assuming it has 'customer_id' and 'product_id' columns)
+# Load   dataset into a DataFrame (assuming it has 'customer_id' and 'product_id' columns)
 data = pd.read_csv(DATASET_PATH)
 
 # Routes
@@ -41,7 +41,7 @@ def recommend():
     # Sort predictions by predicted rating in descending order
     user_predictions = sorted(user_predictions, key=lambda x: x['predicted_rating'], reverse=True)
 
-    # Get top recommended products (you can choose how many you want to display)
+    # Get top recommended products (you can adjust how many you want to display)
     top_recommendations = user_predictions[:5]  # Display top 5 recommendations
 
     return render_template('recommendations.html', user_id=user_id, recommendations=top_recommendations)
